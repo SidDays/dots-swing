@@ -21,11 +21,11 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-import dotsgui.dots.Dots;
+import dotsgui.dots.DotsGame;
 
 public class DotsGUI
 {
-    Dots game;
+    DotsGame game;
     DotsGUI()
     {
         final JFrame frame=new JFrame();
@@ -34,14 +34,15 @@ public class DotsGUI
         frame.setTitle("Dots");
         frame.setLayout(new BorderLayout());
         
-        game=new Dots(3+1,3+1,2); //since dots constructor takes no. of vertices
+        game=new DotsGame(3+1,3+1,2); //since dots constructor takes no. of vertices
         final DotsBox box=new DotsBox(game);
         game.disp();
         box.newGame(game);
         box.repaint();
         frame.add(box);
         
-        //menu bar and its components
+        // Menu bar and its components 
+        
         JMenuBar menubar=new JMenuBar();
         menubar.setLayout(new FlowLayout(FlowLayout.LEFT));
         
@@ -66,7 +67,7 @@ public class DotsGUI
                             JOptionPane.showMessageDialog(frame, "There was an error.\nCreating default 2x2 game.","Invalid input...",JOptionPane.ERROR_MESSAGE);
                             r=2; c=2; p=2;
                         }
-                        game=new Dots(r+1,c+1,p);
+                        game=new DotsGame(r+1,c+1,p);
                         game.disp();
                         box.newGame(game);
                         
@@ -139,6 +140,7 @@ public class DotsGUI
                         
                     }
                 });
+        
         bottom.add(label1);
         bottom.add(field1);
         bottom.add(label2);

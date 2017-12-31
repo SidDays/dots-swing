@@ -2,9 +2,10 @@ package dotsgui.dots;
 
 import java.util.Scanner;
 
-import dotsgui.DotsConstants;
-
-public class Dots implements DotsConstants {
+public class DotsGame {
+	
+	public static final char MASK = '~';
+	
 	public int turn;
 	public int lines;
 	public int lines_max;
@@ -14,7 +15,7 @@ public class Dots implements DotsConstants {
 	public Dot grid[][];
 	public Square sq[][];
 
-	public Dots(int m, int n, int players) {
+	public DotsGame(int m, int n, int players) {
 		turn = 1;
 		player = 1;
 		lines = 0;
@@ -147,7 +148,7 @@ public class Dots implements DotsConstants {
 		System.out.print("Enter the no. of rows and columns: ");
 		x = sc.nextInt();
 		y = sc.nextInt();
-		Dots game = new Dots(x + 1, y + 1, p);
+		DotsGame game = new DotsGame(x + 1, y + 1, p);
 		sc.nextLine();
 		do {
 			System.out.println("\nThe grid is currently...");

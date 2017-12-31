@@ -9,7 +9,7 @@ public class Dot {
 		this.j = j;
 	}
 
-	public void setConnection(Dot d, Dots game) {
+	public void setConnection(Dot d, DotsGame game) {
 		if (hasConnection(d)) {
 			System.err.println(this + " is already connected to " + d);
 			game.lines--;

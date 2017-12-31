@@ -6,25 +6,32 @@ import java.awt.Graphics;
 
 import javax.swing.JComponent;
 
-import dotsgui.dots.Dots;
+import dotsgui.dots.DotsGame;
 
-public class DotsBox extends JComponent implements DotsConstants {
+public class DotsBox extends JComponent {
+	
 	private static final long serialVersionUID = 1L;
+	
+	private static final char MASK = DotsGame.MASK;
+	private static final int DOT_RADIUS = 6; // radius of dots
+	private static final int PADDING = 10;
+	private static final int FONT_SIZE = 36;
+	
 	private int h, w; // height and width of dots box
 
 	// private int x1,y1; //corners of dots grid
 	// private int x2, y2;
 
 	private int r, c; // no of rows and columns
-	Dots game;
+	DotsGame game;
 
-	DotsBox(Dots game) {
+	DotsBox(DotsGame game) {
 		this.game = game;
 		this.r = game.grid.length - 1;
 		this.c = game.grid[0].length - 1;
 	}
 
-	void newGame(Dots game) {
+	void newGame(DotsGame game) {
 		this.game = game;
 		this.r = game.grid.length - 1;
 		this.c = game.grid[0].length - 1;

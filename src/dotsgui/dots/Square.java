@@ -1,13 +1,12 @@
 package dotsgui.dots;
 
-import dotsgui.DotsConstants;
-
-public class Square implements DotsConstants {
+public class Square 
+{
 	private char data;
 	private int i, j;
 
 	Square(int i, int j) {
-		data = MASK;
+		data = DotsGame.MASK;
 		this.i = i;
 		this.j = j;
 	}
