@@ -12,7 +12,6 @@ public class DotsBox extends JComponent {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static final char MASK = DotsGame.MASK;
 	private static final int DOT_RADIUS = 6; // radius of dots
 	private static final int PADDING = 10;
 	private static final int FONT_SIZE = 36;
