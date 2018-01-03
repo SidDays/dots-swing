@@ -10,7 +10,7 @@ Made as a part of coursework for Object Oriented Programming Methodology, during
 * A player that completes the fourth side of a square (a box) colors that box and must play again.
 * When all boxes have been colored, the game ends and the player who has colored more boxes wins.
 
-(Courtesy of https://www.math.ucla.edu/~tom/Games/dots&boxes.html)
+(Courtesy of [math.ucla.edu](https://www.math.ucla.edu/~tom/Games/dots&boxes.html))
 
 ## Instructions
 * To start a new game:
