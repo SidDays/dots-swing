@@ -17,9 +17,9 @@ Made as a part of coursework for Object Oriented Programming Methodology, during
     1. Click on File -> New Game
     2. Specify number of rows
     3. Specify number of columns.
-    4. Specify number of players. Each player gets their own unique color denoting the boxes they occupy the grid.
+    4. Specify number of players. The player's number denotes the boxes they occupy the grid.
 * To play the game:
 	1. Enter the coordinates of the start point (x1, y1) and end point (x2, y2).
     2. Press Go. The line appears
-    3. When a box is completed, the player number appears inside the box with that player's color.
+    3. When a box is completed, the player number appears inside the box.
     4. The player with most boxes at the end wins the game
