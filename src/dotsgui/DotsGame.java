@@ -1,21 +1,21 @@
-package dotsgui.dots;
+package dotsgui;
 
 import java.util.Scanner;
 
 public class DotsGame {
-	
-	public static final char MASK = '~';
-	
-	public int turn;
-	public int lines;
-	public int lines_max;
-	public short player;
-	private short players;
-	private int score[];
-	public Dot grid[][];
-	public Square sq[][];
 
-	public DotsGame(int m, int n, int players) {
+	public static final char MASK = '~';
+
+	int turn;
+	int lines;
+	int lines_max;
+	short player;
+	short players;
+	int score[];
+	Dot grid[][];
+	Square sq[][];
+
+	DotsGame(int m, int n, int players) {
 		turn = 1;
 		player = 1;
 		lines = 0;
@@ -60,7 +60,7 @@ public class DotsGame {
 		return false;
 	}
 
-	public void updateSquares() {
+	void updateSquares() {
 		boolean justwon = false;
 		try {
 			for (int i = 0; i < sq.length; i++) {
@@ -84,7 +84,7 @@ public class DotsGame {
 		}
 	}
 
-	public void whosPlayin() {
+	void whosPlayin() {
 		lines++;
 		player = (short) (player % players + 1);
 		turn++;
@@ -95,7 +95,8 @@ public class DotsGame {
 				"Turn " + turn + ", (" + lines + "/" + lines_max + " done) - Your turn, player " + player + "!");
 	}
 
-	public void disp() {
+	void disp() // display the grid in the console (TESTING)
+	{
 		int m = grid.length;
 		int n = grid[0].length;
 		for (int i = 0; i < m; i++) {
@@ -136,7 +137,7 @@ public class DotsGame {
 			System.out.println((i + 1) + "\t" + score[i]);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { // play the game in the console (TESTING)
 		Scanner sc = new Scanner(System.in);
 		int x, y;
 		int z, w;

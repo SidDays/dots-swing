@@ -1,4 +1,4 @@
-package dotsgui.dots;
+package dotsgui;
 
 public class Dot {
 	private Dot up, left, right, down;
@@ -9,7 +9,7 @@ public class Dot {
 		this.j = j;
 	}
 
-	public void setConnection(Dot d, DotsGame game) {
+	void setConnection(Dot d, DotsGame game) {
 		if (hasConnection(d)) {
 			System.err.println(this + " is already connected to " + d);
 			game.lines--;
@@ -43,7 +43,7 @@ public class Dot {
 		System.err.println("Invalid connection.");
 	}
 
-	public boolean hasConnection(Dot d) {
+	boolean hasConnection(Dot d) {
 		try {
 			if (left == d || right == d || up == d || down == d)
 				return true;

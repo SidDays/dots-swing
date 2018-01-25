@@ -1,7 +1,6 @@
-package dotsgui.dots;
+package dotsgui;
 
-public class Square 
-{
+public class Square {
 	private char data;
 	private int i, j;
 
