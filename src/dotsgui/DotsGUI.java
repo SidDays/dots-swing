@@ -95,7 +95,13 @@ public class DotsGUI {
 		about.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				JOptionPane.showMessageDialog(frame,
-						"DotsGame v1.0\nA mini project in java\n<html><b>SE-A2-1311020 Aditya G.<br>SE-A2-1311028 Chinmay K.<br>SE-A2-1311029 Siddhesh K.<br>SE-A2-1311033 Ashutosh M.</b></html>",
+						"<html><h1>DotsGame v1.1</h1>"
+						+ "<h2>A mini project in Java</h2>"
+						+ "<h3>Made by Siddhesh Karekar (SE-A2 1311029)</h3>"
+						+ "<p>As part of coursework for the course of <br>"
+						+ "Object-Oriented Programming Methodology for <br>"
+						+ "K. J. Somaiya College of Engineering <br>"
+						+ "(Autonomous College affiliated to the University of Mumbai.)</p></html>",
 						"About DotsGame", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
